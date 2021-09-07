@@ -1,0 +1,173 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ae7c78;
+}
+
+h1 {       
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    line-height: 59px; 
+}
+
+h2 {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height */
+    letter-spacing: 0.02em;    
+}
+
+.about-shop p,
+.news p {
+    font-size: 24px;
+    line-height: 29px;    
+}
+
+.about-shop a,
+.slider a {
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    color: #FFFFFF;       
+}
+
+.button {
+    background: #D89999;
+    border-radius: 40px;    
+} 
+
+.flowers {    
+    border-radius: 10px;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+  
+
+.advantages li,
+.steps li,
+cite {
+    font-weight: 500;    
+}
+
+.slider-item h3,
+.price {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.catalog a {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height */
+    text-align: center;    
+    letter-spacing: 0.02em;
+    color: #FFFFFF;    
+}
+
+.catalog p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    color: #FFFFFF;    
+}
+
+.sections li {
+    background: url("img/rectangle_19.svg") no-repeat rgba(174, 124, 120, 0.6);
+    width: 387px;
+    height: 442px;
+    border-radius: 10px; ;
+}
+
+.sections li:first-child {
+    background: url("img/roses-in-vase.png");
+}
+
+.sections li:nth-child(2) {
+    background: url("img/fresh-beautiful-peony-flowers-vase.png"); 
+}
+
+.sections li:last-child {
+    background: url("img/woman-behind-bouquet.png");
+}
+
+.discount {     
+    background-color: rgba(174, 124, 120, 0.6); 
+}
+
+.discount h2 {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    line-height: 59px;
+    letter-spacing: 0.02em;    
+    color: #FFFFFF;
+}
+
+.discount p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+
+.contacts h3 {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+}
+
+.contacts a,
+.worktime {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;   
+}
+
+
+.page-footer {
+    background: #AE7C78;
+}
+
+ .page-footer a {
+    color: #FFFFFF;
+ }
+
