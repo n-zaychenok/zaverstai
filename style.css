@@ -1,17 +1,21 @@
+/*Общие стили*/
+
 html,
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ae7c78;
+    margin: 0;
+    padding: 0;
+    min-width: 1220px;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ae7c78;
+    background-color:#FFFFFF;
 }
 
 h1 {       
-    font-family: Playfair Display;
+    font-family: "Playfair Display", "Times New Roman", serif;
     font-style: normal;
     font-weight: normal;
     font-size: 44px;
@@ -19,7 +23,7 @@ h1 {
 }
 
 h2 {
-    font-family: Playfair Display;
+    font-family: "Playfair Display", "Times New Roman", serif;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -28,146 +32,624 @@ h2 {
     letter-spacing: 0.02em;    
 }
 
-.about-shop p,
-.news p {
-    font-size: 24px;
-    line-height: 29px;    
+a {
+    color: #ae7c78;
+    text-decoration: none;
 }
 
-.about-shop a,
-.slider a {
-    font-size: 16px;
-    line-height: 20px;
-    /* identical to box height */
-    
-    color: #FFFFFF;       
+a:hover {
+    opacity: 0.7;
 }
 
-.button {
+a:focus,
+a:active {
+    opacity:0.3;
+}
+
+.button {    
     background: #D89999;
-    border-radius: 40px;    
+    border-radius: 40px;
+    color: #FFFFFF;
+    padding: 30px 70px;
+    display: inline-block;
+    vertical-align: middle;
 } 
 
-.flowers {    
-    border-radius: 10px;
+.button:hover {
+    opacity: 0.8;
+}
+
+.button:active {
+    opacity: 0.6;
 }
 
 .visually-hidden {
     position: absolute;
-    clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
     margin: -1px;
-  }
-  
-
-.advantages li,
-.steps li,
-cite {
-    font-weight: 500;    
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
-.slider-item h3,
-.price {
-    font-style: normal;
+.section-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.section-containter-small {
+    width: 794px;
+    margin: 0 auto;
+}
+  
+  /*Стили для page-header*/
+
+.page-header {
+      margin-top: 26px;
+      padding: 22px 0;
+      border-top: 1px solid #AE7C78;
+      border-bottom: 1px solid #AE7C78;
+      position: relative;
+  }
+
+.logo {
+    position: absolute;
+    top:50%;   
+    left: 50%; 
+    transform: translate(-50%,-50%);   
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;    
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    margin-right:50px;       
+}
+
+.menu-item:nth-child(4) {
+    margin-left:105px;
+}
+
+.menu-item:nth-child(6n+3) {
+    margin-right: 105px;
+}
+
+.menu-item:nth-child(6n) {
+    margin-right: 0;
+}
+
+/*Стили для about-shop*/
+
+.about-shop {
+    padding-top: 82px;
+    margin-bottom: 48px;
+}
+
+.about-shop .section-container{
+    display: flex;
+}
+
+.promo {
+    max-width: 384px;
+    margin-right: 23px;
+}
+
+.promo-heading {
+    margin-top: 0;
+    margin-bottom: 24px;  
+}
+
+.promo-text {
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 0;
+    margin-bottom: 64px;
+}
+
+.promo-image {    
+    border-radius: 10px;
+}
+
+.promo-image:nth-of-type(1) {
+    margin-right: 20px;
+    margin-top: 58px;
+}
+
+/*Стили для advantages*/
+
+.advantages {
+    margin-bottom: 80px;
+}
+
+.advantages-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4%;   
+}
+
+.advantages-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.advantages-image {
+    margin-right: 20px;
+}
+
+.advantages-heading {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-top: 0;    
+}
+
+.advantages-text {
+    margin: 0;
+}
+
+/*Стили для popular*/
+
+.popular {
+    margin-bottom: 80px;
+
+}
+
+.popular-heading {
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.slider-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.slider-item {
+    align-items: flex-start;
+    display: none;
+}
+
+.slider-item:nth-child(1) {
+    display: flex;
+}
+
+.slider-item-description {
+    max-width: 387px;
+    margin-right: 20px;
+    padding: 27px;
+}
+
+.slider-item-heading {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
-.catalog a {
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: bold;
+.slider-item-text {
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.slider-item-size {
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.slider-item-price {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 0;
+    margin-bottom: 64px;
+}
+
+.slider-button {
+    padding: 30px 107px;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.controls-button {
+    border: none;
+    background-color: transparent;
+}
+
+.controls-button.previous {
+    margin-right: 20px;
+}
+
+.controls-button:hover {
+    opacity: 0.8;
+}
+
+
+.controls-button:active {
+    opacity: 0.5;
+}
+
+/*Стили для catalog*/
+
+.catalog {
+    margin-bottom: 80px;
+}
+
+.catalog-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 19px;
+    grid-template-rows: 442px;
+}
+
+.catalog-item {
+    border-radius: 10px;
+}
+
+.catalog-item-link {    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;
+    background: rgba(174, 124, 120, 0.6);
+    background-size: cover;
+    border-radius: 10px;
+    padding: 20px;    
+    box-sizing: border-box;       
+}
+
+.catalog-item-link:hover {
+    opacity: 1;
+    background: rgba(174, 124, 120, 0.8);
+}
+
+.catalog-item-link:active{
+    opacity: 1;
+    background: rgba(174, 124, 120, 1);
+}
+
+.catalog-item-heading {
+    font-family: "Playfair Display", "Times New Roman", serif;
+    font-weight: 700;
     font-size: 36px;
     line-height: 48px;
-    /* identical to box height */
-    text-align: center;    
     letter-spacing: 0.02em;
-    color: #FFFFFF;    
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
-.catalog p {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    /* identical to box height */
-    color: #FFFFFF;    
+.catalog-item-text {
+    color: #FFFFFF;
+    margin: 0;
 }
 
-.sections li {
-    background: url("img/rectangle_19.svg") no-repeat rgba(174, 124, 120, 0.6);
-    width: 387px;
-    height: 442px;
-    border-radius: 10px; ;
+/*Стили для discount*/
+
+.discount {
+    margin-bottom: 80px; 
 }
 
-.sections li:first-child {
-    background: url("img/roses-in-vase.png");
+.discount-block {
+    display: flex;
+    background: #AE7C78;
 }
 
-.sections li:nth-child(2) {
-    background: url("img/fresh-beautiful-peony-flowers-vase.png"); 
+.discount-text-block {
+    padding: 40px 20px 64px 102px;    
 }
 
-.sections li:last-child {
-    background: url("img/woman-behind-bouquet.png");
-}
-
-.discount {     
-    background-color: rgba(174, 124, 120, 0.6); 
-}
-
-.discount h2 {
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: normal;
+.discount-heading {      
+    font-weight: 400;   
     font-size: 44px;
     line-height: 59px;
-    letter-spacing: 0.02em;    
-    color: #FFFFFF;
+    color: #FFFFFF;    
+    margin-top: 0;
+    margin-bottom: 24px;
 }
 
-.discount p {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
+.discount-text {
     font-size: 24px;
     line-height: 29px;
     color: #FFFFFF;
+    max-width: 387px;
+    margin: 0;  
 }
 
+/*Стили для steps*/
 
-.contacts h3 {
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 48px;
-    /* identical to box height */
+.steps {
+    margin-bottom: 80px;
+}
+
+.steps-heading {
+    margin-top: 0;
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.steps-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.steps-item {
+    margin-right: 20px;
     display: flex;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
 }
 
-.contacts a,
-.worktime {
-    font-family: Montserrat;
-    font-style: normal;
+.steps-item:last-child {
+    margin-right: 0;
+}
+
+.steps-image {
+    margin-bottom: 8px;
+}
+
+.steps-subheading {
     font-weight: 500;
     font-size: 16px;
-    line-height: 20px;
-    display: flex;
-    align-items: center;   
+    margin-top: 0;
+    margin-bottom: 8px;
 }
+
+.steps-text {
+    max-width: 285px;    
+    margin: 0;
+}
+
+/*Стили для news*/
+
+.news {
+    margin-bottom: 80px;
+}
+
+.news .section-container{
+    display: flex;
+}
+
+.news-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.news-heading {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    margin-right: 21px;
+    width: 487px;
+}
+
+.news-text {
+    font-size: 24px;
+    line-height: 29px;
+    width: 387px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.social-net-list {
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+}
+
+.social-net-item {
+    margin-right: 20px;    
+}
+
+.social-net-item:last-child {
+    margin-right: 0;  
+}
+
+.news-images {
+    display: grid;
+    grid-template-columns: 285px 387px;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px
+}
+
+.news-images img:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.news-images img:nth-child(3) {
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+/*Стили для reviews*/
+
+.reviews {
+    margin-bottom: 80px; 
+}
+
+.reviews .section-container {
+    padding: 40px 44px 64px;
+
+
+}
+
+.reviews-heading {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px; 
+}
+
+.reviews-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 106px;
+    padding: 0;
+    margin: 0;
+}
+
+.reviews-item {
+    display: flex;
+    flex-direction: column;         
+}
+
+.reviews-item blockquote {
+    margin: 0;
+    text-align: center;
+}
+
+.reviews-item p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.reviews-item cite {
+    font-style: normal;
+    font-weight: 500;
+}
+
+/*Стили для map*/
+
+.map {    
+    position: relative;
+    padding-top: 52px;
+    padding-bottom: 72px;    
+}
+
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.contacts {
+    position: relative;
+    margin-left: 102px;
+    padding: 40px 108px 65px 35px;
+    max-width: 386px;
+    display: flex;
+    flex-direction: column;    
+    z-index: 2;
+    background: #F7FAFC;
+    box-shadow: 0px 4px 40px rgba(217, 217, 217, 0.3);
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.contacts-heading {
+    margin-top: 0;
+    margin-bottom: 42px;
+}
+
+.contacts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contacts-item {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.contacts-item:last-child {
+    margin-bottom: 0;
+}
+
+.contacts-text {
+    margin-top: 0;
+    margin-bottom: 17px;
+}
+
+.contacts-link {
+    font-weight: 500;
+}
+
+.time {
+    font-weight: 500;
+}
+
+/*Стили для page-footer*/
 
 
 .page-footer {
     background: #AE7C78;
+    color: #FFFFFF; 
 }
 
- .page-footer a {
-    color: #FFFFFF;
- }
+.page-footer .section-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 47px;
+}
 
+.footer-logo {
+    position: static;   
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+}
+
+.footer-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-nav-item {
+    margin-right: 68px;    
+}
+
+.footer-nav-item:last-child {
+    margin-right: 0;
+}
+
+.footer-nav-item a {
+    color: #FFFFFF; 
+}
+
+.page-footer .social-net-list {
+    display: flex;
+    align-items: center;
+}
